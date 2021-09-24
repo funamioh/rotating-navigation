@@ -13,5 +13,23 @@ body {
 
 .container {
   background-color: #fafafa;
-  text-align: center;
+  transform-origin: top left;
+  transition: transfrom 0.5s linear;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+}
+
+.container.show-nav {
+  transform: rotate(-20deg);
+}
+
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.circle {
+  background-color: #ff7979;
 }
