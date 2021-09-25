@@ -39,6 +39,10 @@ body {
   transition: transform 0.5s linear;
 }
 
+.container.show-nav .circle {
+  transform: rotate(-70deg);
+}
+
 .circle button {
   cursor: pointer;
   position: absolute;
@@ -50,6 +54,7 @@ body {
   font-size: 26px;
   color: #fff;
 }
+
 .circle button:focus {
   outline: none;
 }
@@ -59,9 +64,14 @@ body {
 }
 
 .circle button#close {
-  top: 60px;
+  top: 60%;
   transform: rotate(90deg);
   transform-origin: top left;
+}
+
+.container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.3s;
 }
 
 nav {
@@ -89,7 +99,28 @@ nav ul li i {
   margin-right: 10px;
 }
 
-nav ul li .content img {
+nav ul li + li {
+  margin-left: 15px;
+  transform: translateX(-150%);
+}
+
+nav ul li + li + li {
+  margin-left: 30px;
+  transform: translateX(-170%);
+}
+
+nav a {
+  color: #fafafa;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+nav a:hover {
+  color: #ff7979;
+  font-weight: bold;
+}
+
+.content img {
   max-width: 100%;
 }
 
